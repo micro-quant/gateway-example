@@ -1,2 +1,21 @@
-eyJhbGciOiJSUzI1NiIsImtpZCI6IjYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJtaWNyb3F1YW50LmlvIiwiZW1haWwiOiJjaHJpc3RpYW4uYmFzaWxlQG1pY3JvcXVhbnQuaW8iLCJleHAiOjE3NDk0OTcyOTUsImlhdCI6MTc0OTQ5MzY5NSwiaXNzIjoiaHR0cHM6Ly9taWNyb3F1YW50LmlvIiwianRpIjoiZTA1ZDE2Y2ItMDBmNS00ZGI5LTkzYTItZjcwMjYzY2E2NGI1IiwibmJmIjoxNzQ5NDkzNjk1LCJzdWIiOiJCb2NJZ25FUFhCWERFRlNBdkRYOWVMUFltbEkzIn0.eSaRO6f2ZMv1MzvnUhtIMl7REoHS3FTs6Lzew-1XkY8H9BoW3xLNJ7Rz72qH43dVqd-D4h6Xhku1GahtnJc97ZiZDv5CMhR2FPJxlmULM1DOnXnYvBurbNfM1CUVD53ueb8GwlhCBGojGjOvy__acW3gkTKs-OZ9djr82nWHmk3mFlQNk2i4CTr_zWWOL9XDY8Finio85m6hKwDWq6ymh9DvJ2pILwU4UYZIi6Nd3QNiQcoD70DClS0EIVvE04r8kAV1osRNxo-OZ3STB4PRu4nPfUXrYUZyFMblsOjKV_9ilqtn5H2KZ33r_ZC8hQCT10YWel615l3QYmkxTyAbgw
 
+NOTE: Remove all contents of this file and replace it with the JWT created directly from microquant
+
+This can be done by creating an AUTH_TOKEN in a particular microquant environment and then creating a python function inside the app 
+that simply prints the AUTH_TOKEN.
+
+How to Create an AUTH_TOKEN:
+    1. Navigate to the environments page (https://app.microquant.io/environments)
+    2. Select any environment you have access to
+    3. Select the "Auth Tokens" tab
+    4. create a new token configuration called "EXAMPLE" with the JWT claims: {"aud": "microquant.io"}
+    4a. The aud token here b/c that is what we validate against; when you configure your API you will configure it with different validation and this aud token should match your API
+
+How to retrieve a token with these configurations:
+    1. Navigate to the new functions page (https://app.microquant.io/functions/_private/_new)
+    2. Create and then run the following function:
+
+        import os
+
+        def handle() -> str:
+            return os.getenv("AUTH_TOKEN_EXAMPLE")
