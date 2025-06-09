@@ -1,4 +1,4 @@
-from marketdata.datasources.base import DataSource
+from api_gateway.datasources.base import DataSource
 
 class DbDataSource(DataSource):
     def __init__(self, db_connection: str):

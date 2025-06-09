@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List, Tuple
-from marketdata.models.market_metadata import MarketMetadata
+from api_gateway.models.market_metadata import MarketMetadata
 
 class DataSource(ABC):
     @abstractmethod

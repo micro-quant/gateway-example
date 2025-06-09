@@ -8,7 +8,7 @@ from typing import Dict
 AUDIENCE = "microquant.io"
 
 def get_public_key() -> str:
-    with open("../shared/public_key.pem", "r") as f:
+    with open("../dev-secrets/public_key.pem", "r") as f:
         public_key = f.read()
         return public_key
 

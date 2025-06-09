@@ -47,7 +47,7 @@ def gen_jwt():
     import datetime
     from jose import jwt
 
-    with open("../shared/private_key.pem", "r") as f:
+    with open("../dev-secrets/private_key.pem", "r") as f:
         private_key = f.read()
         # This is a sample payload; similar to what microquant.io would generate
         payload = {

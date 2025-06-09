@@ -1,8 +1,8 @@
 import csv
 from pathlib import Path
-from marketdata.datasources.base import DataSource
-from marketdata.models.market_data_point import MarketDataPoint
-from marketdata.models.market_metadata import MarketMetadata
+from api_gateway.datasources.base import DataSource
+from api_gateway.models.market_data_point import MarketDataPoint
+from api_gateway.models.market_metadata import MarketMetadata
 
 class CsvDataSource(DataSource):
     def __init__(self, marketdata_path: str, market_metadata_path: str):

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
-from marketdata.datasources.base import DataSource
-from marketdata.dependencies import get_data_source
+from api_gateway.datasources.base import DataSource
+from api_gateway.dependencies import get_data_source
 
 router = APIRouter()
 
