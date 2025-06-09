@@ -1,0 +1,5 @@
+ticker,name,sector,exchange
+AAPL,Apple Inc.,Technology,NASDAQ
+GOOG,Alphabet Inc.,Technology,NASDAQ
+MSFT,Microsoft Corporation,Technology,NASDAQ
+TSLA,Tesla Inc.,Consumer Discretionary,NASDAQ

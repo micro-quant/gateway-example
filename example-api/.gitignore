@@ -1,0 +1,26 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables and secrets
+# NOTE: this should be ignored, but we have it here because it is an example repo
+# .env.*
+
+# VSCode / PyCharm / IDE settings
+.vscode/
+.idea/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Distribution / packaging
+build/
+dist/
